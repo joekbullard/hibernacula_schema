@@ -133,6 +133,8 @@ table_fields = [
     }
 ]
 
+arcpy.AddGlobalIDs_management(obs_table_name)
+
 for field in table_fields:
     arcpy.AddField_management(obs_table_name, field["name"], field["type"], field_alias=field["alias"])
 
